@@ -1,0 +1,12 @@
+{% load static %}
+<nav>
+    <!-- se le incluye anchura al logo tipo no se le incluyo=> width="64" -->
+    <img src="{% static 'img/log.png' %}" width="64"/>  
+    <ul>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'portfolio' %}"> Mi trabajo </a></li>
+        <!-- <li><a href="http://">Biography</a></li>
+        <li><a href="http://">My jobs</a></li>
+        <li><a href="http://">Researh</a></li> -->
+    </ul>
+</nav>

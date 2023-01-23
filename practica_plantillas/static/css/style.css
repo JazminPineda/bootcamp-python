@@ -1,0 +1,127 @@
+/* variables globales */
+:root{
+    --color--primary: #545AFF;
+    --color--secondary: #01BEFF;
+    --color--title: #288FFF;
+    --color--text: #3c42489b;
+    --color--bg: #caccce; 
+    --font-title: vogue;
+    --font-text: font;
+
+}
+/* todo contenido revisar*/
+* {
+    padding: (0,0,1);
+    margin:  (0,0,1);
+    box-sizing: border-box;
+    font-family: var( --font-text);
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-title);
+    color:var(--color--secondary)
+
+}
+/* ver tema de rendimiento */
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    height: 100px;
+    background-color: var(--color--secondary00);
+}
+
+nav img{
+    margin: 25px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+nav ul li{
+    padding: 20px;
+    
+}
+/* barra de menu */
+nav ul li a{
+    text-decoration: none;
+    color:#01BEFF;
+    font-size: 30px;
+    font-weight: 700 ;
+    font-family: var(--font-title);
+    
+}
+
+/* se coloca para que cuando este el puntero cambie la letra de color */
+nav ul li a:hover{
+    color: rgba(34, 222, 225, 0.77);
+}
+/* 
+donde se coloca todo al centro */
+main{
+    background-color: var(--color--primary);
+    width: 100vw;
+    display:flex;
+    /* cambio display:se cambia a columna */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+footer{
+    width: 100vw;
+    min-height:  150px;
+    background-color:var(--color--text);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul{
+    /* se elimina de pantatall */
+    list-style-type: none;
+}
+footer ul li a{
+    color:var(--color--bg);
+    text-decoration: none; 
+}
+footer img {
+    margin: 25px;
+
+}
+
+.about{
+    display: flex;
+    padding: 25px;
+}
+
+.about-content{
+   width: 350px; 
+   padding: 50px;
+}
+
+.challenge{
+    margin-top: 50px;
+    display: flex;
+    justify-self: center;
+    width: 50%;
+    flex-wrap: wrap;  
+   
+}
+/* importancion fuente */
+@font-face {
+    font-family: vogue;
+    src:url('../fonts/NexaText-Trial-ExtraLight.ttf')
+}
+@font-face{
+    font-family: font;
+    src:url('../fonts/nexa-Trial-BookItalic')
+}
+
