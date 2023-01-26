@@ -7,6 +7,58 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>  Hola mundo soy comentarios </h1> 
+    
+     <h3> Se obtiene todos los autores que contienen en su nombre la palabra try</h3>
+
+      <ul>
+        {% for element in contener %}
+        <li> {{element.name}} </li>
+        {% endfor%}
+      </ul>
+
+
+
+    <h3> Se obtiene todos los elementos cuyo valor de emial  sea <= 15 </h3>
+
+      <ul>
+        {% for element in filteres3 %}
+        <li> {{element.email}} </li>
+        {% endfor%}
+      </ul>
+
+      
+
+    <h3> Elemento ordenados por email (Order By) </h3>
+        <ul>
+         {% for orden in ordenes %}
+            <li>{{orden.email}} </li>
+         {% endfor%}
+        </ul>
+    
+    <h3> Obtener los  10 primeros (limit) </h3>
+    <ul>
+        
+        {% for limit in limites %}
+            <li>{{limit.email}} </li>
+        {% endfor%}
+    </ul>
+
+    <h3> Buscando autor email dani71 </h3>
+
+      <ul>
+            {% for element in filtered %}
+            <li>{{element.name}} | {{element.email}} </li>
+            {% endfor%}
+      </ul>
+    <h3>  Obtiene un único objeto (filtrado por ID)</h3>
+       <p> <li>{{ author.email}}  </li></p>
+
+    <h3> Todos los autores son </h3>
+    <ul>
+        {% for author in authors %}
+        <li>{{author.name}} ( {{author.email}})</li>
+        {% endfor%}
+    </ul>
+    <h3> Total autores ; {{authors|length}} </h3>
 </body>
 </html>
