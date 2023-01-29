@@ -2,7 +2,19 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Author, Entrý
 
+
+# Actualizacion de datos
+# Se pbtoeme el objeto y se modifica el nombre
+
+def update(request):
+    author = Author.objects.get(id=1)
+    author.name = "Jazmin"
+    author.email = 'jazmin.pineda@analistaefectiva.com'
+    author.save()
+    return HttpResponse("Se actualizaron los datos ")
+
 # se alcanza la vista sobre la consulta
+
 def queries(request):
     
     # Obtener todos los elementos 
